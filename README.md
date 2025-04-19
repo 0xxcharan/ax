@@ -1,13 +1,32 @@
 <p align="center">
 <a href="https://ax-framework.gitbook.io/wiki" target="_blank"> 
-<img src="https://raw.githubusercontent.com/attacksurge/ax/master/screenshots/read-the-docs.png"/>
+<img src="https://raw.githubusercontent.com/attacksurge/ax/master/screenshots/axbanner.png"/>
 </a> 
 </p>
 
+<p align="center">
+<a href="https://twitter.com/0xtavian"><img src="https://img.shields.io/badge/Follow-@0xtavian-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=222222"></a>
+&nbsp;&nbsp;
+<a href="https://ax.attacksurge.com/"><img src="https://img.shields.io/badge/Documentation-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rLW9wZW4iPjxwYXRoIGQ9Ik0xMiA3djE0Ii8+PHBhdGggZD0iTTMgMThhMSAxIDAgMCAxLTEtMVY0YTEgMSAwIDAgMSAxLTFoNWE0IDQgMCAwIDEgNCA0IDQgNCAwIDAgMSA0LTRoNWExIDEgMCAwIDEgMSAxdjEzYTEgMSAwIDAgMS0xIDFoLTZhMyAzIDAgMCAwLTMgMyAzIDMgMCAwIDAtMy0zeiIvPjwvc3ZnPg==&logoColor=white"></a>
+&nbsp;&nbsp;
+<a href="https://github.com/attacksurge/ax/tree/master/modules"><img src="https://img.shields.io/badge/Scan Modules-%23000000.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNoaWVsZCI+PHBhdGggZD0iTTIwIDEzYzAgNS0zLjUgNy41LTcuNjYgOC45NWExIDEgMCAwIDEtLjY3LS4wMUM3LjUgMjAuNSA0IDE4IDQgMTNWNmExIDEgMCAwIDEgMS0xYzIgMCA0LjUtMS4yIDYuMjQtMi43MmExLjE3IDEuMTcgMCAwIDEgMS41MiAwQzE0LjUxIDMuODEgMTcgNSAxOSA1YTEgMSAwIDAgMSAxIDF6Ii8+PC9zdmc+&logoColor=white"></a>
+&nbsp;&nbsp;
+<a href="https://discord.gg/nGqfRh9tdT"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"></a>
+<hr>
+</p>
 
-# Overview
-The Distributed Scanning Framework for Everybody! Join our Discord https://discord.gg/KYcD5E4qjU!
+**Ax Framework is a next-generation cloud automation system for offensive security and distributed scanning.**  
+Designed to scale with your workflow, Ax orchestrates custom tools, scripts, and scans across cloud fleets — with zero friction.
 
+- **Modular scanning** with support for tools like `nmap`, `ffuf`, `gowitness`, `nuclei`, and many more.  
+- **Fleet-wide execution** of arbitrary binaries or scripts, with support for 9 major cloud providers: Digital Ocean, IBM Cloud, Linode, Azure, AWS, Hetzner, GCP, Scaleway and Exoscale.  
+- **Custom JSON-based modules** define the base command structure and expose variables for runtime injection.  
+- **Automatic interpolation** of user-provided arguments into modules to build the final command on each instance.  
+- **Smart input distribution**, including automatic splitting of target lists, wordlists, and configuration files.  
+- **Built-in result merging**, with support for multiple formats: `dir`, `txt`, `oG`, `csv`, `xml`, `jsonl`, or `none`.  
+- **Multi-provider flexibility**, allowing you to switch between clouds effortlessly.
+
+# Introduction 
 Ax Framework is a free and open-source tool utilized by Bug Hunters and Penetration Testers to efficiently operate in multiple cloud environments. It helps build and deploy repeatable infrastructure tailored for offensive security purposes.
 
 Ax includes a set of Packer Provisioner files to choose from ([JSON](https://github.com/attacksurge/ax/tree/master/images/json/provisioners) or [HCL](https://github.com/attacksurge/ax/tree/master/images/pkr.hcl/provisioners)), or you can [create your own](https://ax-framework.gitbook.io/wiki/fundamentals/bring-your-own-provisioner) (recommended).
@@ -22,7 +41,7 @@ Once Ax is set up and configured, you can deploy a fleet of 50-100+ instances in
 
 Ax attempts to follow the Unix philosophy by providing building blocks that allow users to easily orchestrate one or many cloud instances. This flexibility enables the creation of continuous scanning pipelines and the execution of general, one-off, highly parallelized workloads.
 
-Currently Digital Ocean, IBM Cloud, Linode, Azure, AWS, Hetzner, GCP and Scaleway are officially supported cloud providers.
+Currently Digital Ocean, IBM Cloud, Linode, Azure, AWS, Hetzner, GCP, Scaleway and Exoscale are officially supported cloud providers.
 
 ![](https://raw.githubusercontent.com/attacksurge/ax/refs/heads/master/screenshots/axiom-fleet.gif)
 
@@ -94,6 +113,12 @@ Linode is an absoutely fantastic cloud provider and fully supported! If you're s
 <p align="center">
 <a href="https://www.scaleway.com/en/scaleway-vs-digitalocean/" target="_blank">
 <img src="https://raw.githubusercontent.com/attacksurge/ax/master/screenshots/scaleway.png"/>
+</a>
+</p>
+
+<p align="center">
+<a href="https://community.exoscale.com/platform/quick-start/" target="_blank">
+<img src="https://raw.githubusercontent.com/attacksurge/ax/master/screenshots/exoscale.png"/>
 </a>
 </p>
 
